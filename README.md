@@ -1,53 +1,41 @@
-# Ember-cli-drac-blog-cr-6-19
+Question and Answer in Ember CLI with Firebase data storage
+===========================================================
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+For Epicodus Code Review: Friday, 19 June, 2015
+----------------------------------------------
 
-## Prerequisites
+Description:
+------------
+Allows user to ask questions and answer them, edit and delete both questions and answers.
 
-You will need the following things properly installed on your computer.
+By:
+---
+Andrew David Burt (andrew@ampletorque.com)
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Setup:
+------
+Runs under javascript and ember CLI. To clone this project, first run:
 
-## Installation
+    $ git clone git@github.com:me/my-app.git
+    $ cd my-app
+    $ npm install
+    $ bower install
+    $ ember serve
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+, and open this address:
 
-## Running / Development
+    http://localhost:4200
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+in your web browser.
 
-### Code Generators
+License:
+--------
+MIT License. Copyright 2015 Andrew David Burt.
 
-Make use of the many generators for code, try `ember help generate` for more details
+Bugs:
+-----
+None so far.
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Notes:
+------
+None so far.
