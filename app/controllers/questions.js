@@ -2,14 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  // sortProperties: ['title'],    //defaults posts to be sorted by title
   actions: {
+
     sortByQuestion: function() {
+      sortAscending: true,
       this.set('sortProperties', ['question']);
     },
     sortByAuthor: function() {
+      sortAscending: true,
       this.set('sortProperties', ['author']);
+    },
+    sortByDate: function() {
+      sortAscending: true,
+      this.set('sortProperties', ['timestamp']);
     }
-  }
-
+}
 });
