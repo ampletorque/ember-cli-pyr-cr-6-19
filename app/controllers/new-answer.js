@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   needs: ['question'],
   actions: {
     save: function() {
+      var myThis = this;
       var answer = this.store.createRecord('answer', {
         text: this.get('answerText'),
         timestamp: new Date().getTime()
@@ -13,9 +14,11 @@ export default Ember.Controller.extend({
 
       var question = this.get('controllers.question.model');
       question.get('answers').pushObject(answer);
-      question.save();
-      this.set('answerText', null);
-      this.transitionToRoute('question', question.id);
+      // question.save().then(function(){
+        this.set('answerText', null);
+        this.get('model').reload();
+        this.transitionTo('question', question.id);
+      // });
     }
   }
 
