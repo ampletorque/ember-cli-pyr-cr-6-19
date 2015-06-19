@@ -1,0 +1,44 @@
+<h1>{{model.question}} by {{model.author}}</h1>
+<h3>at {{model.timestamp}}</h3>
+{{#if isEditing}}
+  <form>
+
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input id="author" class="form-control" value=model.author}}
+    </div>
+
+    <div class="form-group">
+      <label for="question">Question</label>
+      {{input id="question" class="form-control" value=model.question}}
+    </div>
+
+    <div class="form-group">
+      <label for="body">Description</label>
+      {{textarea id="body" class="form-control" rows="15" value=model.body}}
+    </div>
+
+    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+
+{{else}}
+  <p>{{model.body}}</p>
+
+  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-primary" {{action 'delete'}}>Delete</button>
+{{/if}}
+
+<h3>Answers</h3>
+<!-- <ul>
+  {{#each answers}}
+    <p>{{text}}</p>
+  {{/each}}
+</ul> -->
+<ul>
+  {{#each answer in model.answers}}
+    <li>{{#link-to 'answer' answer.id}}{{answer.text}} at {{answer.timestamp}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+<p>{{#link-to 'new-answer' this class="btn btn-default"}}New Answer{{/link-to}}</p>
+{{outlet}}

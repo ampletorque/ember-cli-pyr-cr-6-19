@@ -1,0 +1,13 @@
+<h1>Pregunta y Respuesta</h1>
+
+<ul>
+  {{#each question in model}}
+    <li>{{#link-to 'question' question.id}}{{question.question}}{{/link-to}} by: {{question.author}} at: {{question.timestamp}}</li>
+  {{/each}}
+</ul>
+
+<p><a href='#' {{action 'sortByQuestion'}}>Sort by question</a></p>
+<p><a href='#' {{action 'sortByAuthor'}}>Sort by author</a></p>
+
+
+{{#link-to 'new-question' classNames="btn btn-primary"}}New Question{{/link-to}}
