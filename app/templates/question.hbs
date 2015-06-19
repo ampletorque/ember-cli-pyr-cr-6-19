@@ -1,5 +1,5 @@
 <h1>{{model.question}} by {{model.author}}</h1>
-<h3>at {{model.timestamp}}</h3>
+<h5>at {{format-date model.timestamp}}</h5>
 {{#if isEditing}}
   <form>
 
@@ -36,7 +36,7 @@
 </ul> -->
 <ul>
   {{#each answer in model.answers}}
-    <li>{{#link-to 'answer' answer.id}}{{answer.text}} at {{answer.timestamp}}{{/link-to}}</li>
+    <li>{{#link-to 'answer' answer.id}}{{answer.text}} at {{format-date answer.timestamp}}{{/link-to}}</li>
   {{/each}}
 </ul>
 

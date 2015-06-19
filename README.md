@@ -20,6 +20,7 @@ Runs under javascript and ember CLI. To clone this project, first run:
     $ cd my-app
     $ npm install
     $ bower install
+    $ bower install moment --save
     $ ember serve
 
 , and open this address:

@@ -1,18 +1,18 @@
-<h1>{{text}}</h1>
+<h3>{{model.text}}</h3>
 
 {{#if isEditing}}
   <form>
 
     <div class="form-group">
       <label for="text">Answer</label>
-      {{textarea id="text" class="form-control" rows="15" value=text}}
+      {{textarea id="text" class="form-control" rows="15" value=model.text}}
     </div>
 
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
   </form>
 
 {{else}}
-  <p>{{body}}</p>
+  <p>{{model.body}}</p>
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
   <button class="btn btn-primary" {{action 'delete'}}>Delete</button>
