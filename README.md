@@ -16,7 +16,7 @@ Setup:
 ------
 Runs under javascript and ember CLI. To clone this project, first run:
 
-    $ git clone git@github.com:me/my-app.git
+    $ git clone https://github.com/ampletorque/ember-cli-pyr-cr-6-19.git
     $ cd my-app
     $ npm install
     $ bower install
